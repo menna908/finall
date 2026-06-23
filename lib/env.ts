@@ -58,10 +58,10 @@ export const env = {
   API_URL: (() => {
     if (typeof window === "undefined") {
       // server: نتحقق بدقة
-      return validateUrl(getEnvVar("NEXT_PUBLIC_BASE_URL"), "NEXT_PUBLIC_BASE_URL");
+      return "https://ecommerce.roulemisr.com/api/v1";
     } else {
       // client: نستخدم القيمة المحقونة أو fallback ثابت
-      const url = process.env.NEXT_PUBLIC_BASE_URL;
+      const url = "https://ecommerce.roulemisr.com/api/v1";
       if (!url) {
         console.warn("NEXT_PUBLIC_BASE_URL missing in client, using fallback");
         return "https://ecommerce.routemisr.com/api/v1"; // ضع الرابط المناسب
